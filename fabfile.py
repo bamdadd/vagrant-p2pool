@@ -12,6 +12,7 @@ PUPPET_PACKAGE_NAME='puppetlabs-release-precise.deb'
 PUPPET_PACKAGE_URL='http://apt.puppetlabs.com/puppetlabs-release-precise.deb'
 RUBYGEM_PKG='rubygems'
 RUBY_VERSION='1.9.3-p286'
+VAGRANT_HOST='127.0.0.1'
 
 # eliminate some of the errors that happen with sudo
 env.shell = '/bin/sh -c'
