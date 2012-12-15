@@ -21,4 +21,10 @@ fab vmp2pool bootstrap
 * In order to Package files use :
 ./package.sh
 
+* after each change to puppet manifests run package and check the diffs on the vm with :
+fab vmp2pool dryrun
+
+* if everything is fine apply the changes with:
+fab vmp2pool apply
+
 

@@ -154,7 +154,7 @@ def apply(dry_run=''):
     dry_run = '--noop'
   debug_flags = '--debug --verbose' if _debug else ''
   
-  capture = _puppet_sudo("umask 022; puppet apply --detailed-exitcodes {0} --summarize {1} --color=false --show_diff /etc/puppet/manifests/site.pp".format(dry_run, debug_flags))
+  capture = _puppet_sudo("umask 022; puppet apply --detailed-exitcodes {0} --summarize {1} --color=false --show_diff /etc/puppet/manifests/init.pp".format(dry_run, debug_flags))
   
   _write_capture(_puppet2html(capture))
  # if(dry_run != '--noop'): 
