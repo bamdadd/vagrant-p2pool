@@ -8,6 +8,7 @@ Vagrant::Config.run do |config|
     server.vm.host_name = 'p2poolvagrant'
     server.vm.forward_port 80, 8080
     server.vm.forward_port 9333, 9333
+    server.vm.forward_port 22, 2022
     server.vm.network :hostonly, "192.168.33.100"
   end
 end
