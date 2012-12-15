@@ -1,2 +1,4 @@
 .vagrant
 fabfile.pyc
+puppet-dev/
+pkg/
