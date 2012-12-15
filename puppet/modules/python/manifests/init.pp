@@ -8,4 +8,5 @@ class python {
   }  
   package { "python-twisted-web":
      ensure => "installed"
+  }
 }

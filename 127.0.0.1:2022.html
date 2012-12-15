@@ -84,20 +84,29 @@ ul li a { display:block; text-decoration:none; color:black; }
     </style>
   </head>
   <body>
-<div id="results"><h2>Puppet Run: 127.0.0.1:2022</h2><ul><pre>Finished catalog run in 0.03 seconds
+<div id="results"><h2>Puppet Run: 127.0.0.1:2022</h2><ul><pre>/Stage[main]/Python/Package[python-zope.interface]/ensure: ensure changed 'purged' to 'present'
+/Stage[main]/Python/Package[python-twisted-web]/ensure: ensure changed 'purged' to 'present'
+/Stage[main]/Python/Package[python-twisted]/ensure: ensure changed 'purged' to 'present'
+/Stage[main]/Git/Package[git]/ensure: created
+Finished catalog run in 29.11 seconds
 Changes:
+            Total: 4
 Events:
+          Success: 4
+            Total: 4
 Resources:
+            Total: 12
+      Out of sync: 4
+          Changed: 4
           Skipped: 6
-            Total: 8
 Time:
        Filebucket: 0.00
-          Package: 0.00
-   Config retrieval: 0.09
-            Total: 0.09
-         Last run: 1355594033
+   Config retrieval: 0.10
+         Last run: 1355594501
+          Package: 29.06
+            Total: 29.17
 Version:
-           Config: 1355594032
+           Config: 1355594471
            Puppet: 3.0.1</pre></div>
 <div id="legend">
 <ul>
