@@ -9,10 +9,11 @@ cd to the project directory and Run :
 
   vagrant up p2pool
 
-To check server is up :
+*To check server is up : 
 
-  vagrant ssh p2pool
-  exit
+vagrant ssh p2pool
+exit
 
-Install puppet on the VM :
-  fab vmp2pool bootstrap
+*Install puppet on the VM :
+
+fab vmp2pool bootstrap
