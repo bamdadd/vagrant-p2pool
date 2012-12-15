@@ -2,3 +2,4 @@
 fabfile.pyc
 puppet-dev/
 pkg/
+pkg/puppet-dev.tgz
