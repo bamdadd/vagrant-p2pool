@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# This should work for both linux and OS X.  Windows users you're SOL with this script.
+
+export CC=gcc
+
+if [ ! -d ~/.rvm ]; then
+  echo "Installing RVM..."
+  curl -L https://get.rvm.io | bash -s stable --ruby
+else
+  rvm get latest
+fi
+
+echo "Sourcing RVM..."
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export RUBY_VER=ruby-1.9.3-p286
+rvm list rubies | grep $RUBY_VER > /dev/null
+RUBY_INSTALLED=$?
+if [ 0 -ne $RUBY_INSTALLED ]; then
+  echo "Installing Ruby $RUBY_VER..."
+  rvm install $RUBY_VER
+fi
+
+BUNDLE_VERSION=$(bundle --version)
+if [ "Bundler version 1.2.0" != "$BUNDLE_VERSION" ]; then
+  echo "Installing bundler..."
+  gem install --no-ri --no-rdoc bundler -v1.2.0
+fi
+
+echo "Installing Gem Bundles..."
+bundle install --binstubs --quiet --without=production
+
+echo $PATH|grep `pwd` > /dev/null 2>&1
+BINSTUBS_SPECIFIED=$?
+if [ 0 -ne $BINSTUBS_SPECIFIED ]; then
+  echo "Adding binstubs to path..."
+  export PATH=`pwd`/bin:$PATH
+fi
+
