@@ -7,6 +7,12 @@ install Ruby, puppet, Python, Vagrant, Fabric , VirtualBox
 
 cd to the project directory and Run :
 
-vagrant up p2pool
+  vagrant up p2pool
 
-vagrant ssh p2pool
+To check server is up :
+
+  vagrant ssh p2pool
+  exit
+
+Install puppet on the VM :
+  fab vmp2pool bootstrap
